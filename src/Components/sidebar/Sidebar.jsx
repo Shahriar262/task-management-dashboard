@@ -58,14 +58,14 @@ const Sidebar = () => {
       <div className="mt-10">
         <div
           className="relative rounded-2xl p-3 overflow-hidden
-  bg-gradient-to-br from-emerald-900 via-emerald-700 to-emerald-800
-  text-white shadow-lg"
+          bg-gradient-to-br from-emerald-900 via-emerald-700 to-emerald-800
+        text-white shadow-lg"
         >
           <SlBadge className="mb-2" />
 
           <div
             className="absolute -top-10 -right-10 w-40 h-40 
-    bg-white/10 rounded-full blur-2xl"
+          bg-white/10 rounded-full blur-2xl"
           ></div>
 
           <div className="relative z-10">
