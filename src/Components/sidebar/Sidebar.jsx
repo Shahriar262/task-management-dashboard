@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import SidebarItem from "./SidebarItem";
 import { LayoutDashboard, LifeBuoy } from "lucide-react";
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
@@ -8,8 +8,20 @@ import { FiUsers } from "react-icons/fi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { SlBadge } from "react-icons/sl";
 import { X } from "lucide-react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { useNavigate } from "react-router";
+import toast from "react-hot-toast";
 
 const Sidebar = ({ onClose }) => {
+  const { logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    toast.success("Logged out from dashboard");
+    navigate("/");
+  };
+
   return (
     <div className="h-full flex flex-col p-6 bg-gray-100 border-r border-gray-100 relative">
       <button
@@ -25,14 +37,14 @@ const Sidebar = ({ onClose }) => {
       </div>
 
       {/* Main Menu */}
-      <div className="flex-1 overflow-y-auto no-scrollbar mb-2">
-        <p className="text-[10px] ml-[7px] font-bold text-gray-400 uppercase mb-4 tracking-widest">
+      <div className="flex-1 overflow-y-auto no-scrollbar mb-1">
+        <p className="text-[11px] ml-[7px] font-bold text-gray-400 uppercase mb-4 tracking-widest">
           Menu
         </p>
         <div className="space-y-1">
           <SidebarItem
             label="Dashboard"
-            icon={<LayoutDashboard className="w-5 h-5" />}
+            icon={<LayoutDashboard className="w-5 h-5 fill-[#14532d]" />}
             active
           />
           <SidebarItem
@@ -52,7 +64,7 @@ const Sidebar = ({ onClose }) => {
         </div>
 
         {/* General section */}
-        <p className="text-[10px] ml-[7px] font-bold text-gray-400 uppercase mt-8 mb-4 tracking-widest">
+        <p className="text-[11px] ml-[7px] font-bold text-gray-400 uppercase mt-8 mb-4 tracking-widest">
           General
         </p>
         <div className="space-y-1">
@@ -61,7 +73,11 @@ const Sidebar = ({ onClose }) => {
             icon={<IoSettingsOutline className="w-5 h-5" />}
           />
           <SidebarItem label="Help" icon={<LifeBuoy className="w-5 h-5" />} />
-          <SidebarItem label="Logout" icon={<TbLogout className="w-5 h-5" />} />
+          <SidebarItem
+            label="Logout"
+            icon={<TbLogout className="w-5 h-5" />}
+            onClick={handleLogout}
+          />
         </div>
       </div>
 

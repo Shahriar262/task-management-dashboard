@@ -3,20 +3,20 @@ import StatCard from "./StatCard";
 import useDashboardData from "../../../hooks/useDashboardData";
 
 const StatsSection = () => {
-  const { overview, loading } = useDashboardData();
+  const { overview, loading, error } = useDashboardData();
 
   if (loading) {
     return (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {[...Array(4)].map((_, i) => (
-          <div
-            key={i}
-            className="h-28 bg-gray-200 rounded-2xl animate-pulse"
-          />
+          <div key={i} className="h-28 bg-gray-200 rounded-2xl animate-pulse" />
         ))}
       </div>
     );
   }
+
+  if (error)
+    return <div>Something went wrong while fetching stats data!</div>;
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">

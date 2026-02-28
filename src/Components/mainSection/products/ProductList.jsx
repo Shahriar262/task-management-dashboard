@@ -4,6 +4,7 @@ import api from "../../../services/api";
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,6 +18,7 @@ const ProductList = () => {
         }
       } catch (err) {
         console.error("Error fetching products:", err);
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -26,6 +28,8 @@ const ProductList = () => {
   }, []);
 
   if (loading) return <div className="p-6 text-center">Loading...</div>;
+  if (error)
+    return <div className="p-6 text-center">Error fetching products data...</div>;
 
   return (
     <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 w-full lg:max-w-md">
@@ -45,7 +49,11 @@ const ProductList = () => {
             >
               <section className="flex items-center gap-2">
                 <div>
-                  <img src="/src/assets/planBasic.png" className="w-8 h-7" alt="" />
+                  <img
+                    src="/src/assets/planBasic.png"
+                    className="w-8 h-7"
+                    alt=""
+                  />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-medium text-gray-700">
