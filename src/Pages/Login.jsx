@@ -27,8 +27,8 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4">
-      <div className="max-w-md w-full">
+    <div className="min-h-screen  flex flex-col items-center justify-center bg-gray-100 px-4">
+      <div className="max-w-md mt-12 md:mt-0 w-full">
         <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
           <div className="mb-8 text-center">
             <h2 className="text-3xl font-bold text-gray-900">Welcome Back</h2>
@@ -72,7 +72,7 @@ const Login = () => {
           </form>
         </div>
 
-        <div className="mt-8 p-4 bg-gray-200 rounded-2xl border border-dashed border-gray-300 text-center">
+        <div className="mt-8 p-4 bg-gray-200 rounded-2xl border border-dashed border-gray-400 text-center">
           <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
             Test Credentials
           </p>
