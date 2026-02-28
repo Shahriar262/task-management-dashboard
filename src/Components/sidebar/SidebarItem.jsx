@@ -1,19 +1,36 @@
 import React from "react";
 
-const SidebarItem = ({ label, active, icon }) => {
+const SidebarItem = ({ label, active, icon, badge }) => {
   return (
-    <div
-      className={`flex items-center gap-2 mr-1 px-2 py-2 rounded-xl text-sm font-medium cursor-pointer transition-all
+    <div className="relative flex items-center w-full group">
+      
+      {active && (
+        <div className="absolute -left-6 w-1.5 h-8 bg-[#14532d] rounded-r-lg" />
+      )}
+
+      <div
+        className={`flex items-center justify-between w-full px-3 py-2 rounded-xl text-sm font-medium cursor-pointer transition-all
         ${
           active
-            ? "bg-white text-emerald-600 shadow-sm"
-            : "text-gray-500 hover:bg-white hover:text-gray-700"
+            ? "text-gray-900" 
+            : "text-gray-400 hover:text-gray-700 hover:bg-gray-50"
         }`}
-    >
-      {/* Temporary icon placeholder */}
-      <div className="w-4 h-4">{icon}</div>
+      >
+        <div className="flex items-center gap-3">
+        
+          <div className={`w-5 h-5 flex items-center justify-center ${active ? "text-[#14532d]" : "text-gray-400"}`}>
+            {icon}
+          </div>
+          <span>{label}</span>
+        </div>
 
-      <span>{label}</span>
+  
+        {badge && (
+          <span className="bg-[#112D26] text-white text-[10px] px-1.5 py-0.5 rounded-md font-bold">
+            {badge}
+          </span>
+        )}
+      </div>
     </div>
   );
 };
