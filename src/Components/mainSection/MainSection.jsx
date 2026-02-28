@@ -13,7 +13,7 @@ const MainSection = () => {
       <section className="flex flex-col md:flex-row gap-4 md:gap-0 items-start md:items-center justify-between">
         <div className="max-w-full">
           <h1 className="text-2xl sm:text-3xl font-semibold">Dashboard</h1>
-          <p className="text-gray-400 text-xs sm:text-sm mt-1">
+          <p className="text-gray-500 text-xs sm:text-sm mt-1">
             Plan, prioritize and accomplish your task with ease.
           </p>
         </div>

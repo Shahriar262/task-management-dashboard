@@ -9,7 +9,7 @@ const Reminders = () => {
         Meeting with Arc <br /> Company
       </p>
 
-      <p className="text-sm text-gray-400 mb-0.5">
+      <p className="text-sm text-gray-500 mb-0.5">
         Time: 02:00 pm - 04:00 pm
       </p>
 

@@ -30,7 +30,7 @@ const ProductAnalytics = () => {
   if (loading) {
     return (
       <div className="bg-white p-7 rounded-2xl shadow-sm h-80 animate-pulse flex items-center justify-center">
-        <div className="text-gray-400 font-medium">Loading Analytics...</div>
+        <div className="text-gray-500 font-medium">Loading Analytics...</div>
       </div>
     );
   }
@@ -109,7 +109,7 @@ const ProductAnalytics = () => {
             </BarChart>
           </ResponsiveContainer>
         ) : (
-          <div className="h-full flex items-center justify-center text-gray-400 italic text-sm">
+          <div className="h-full flex items-center justify-center text-gray-500 italic text-sm">
             No dynamic data found.
           </div>
         )}

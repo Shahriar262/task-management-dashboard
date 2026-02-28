@@ -56,17 +56,17 @@ const ProductList = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-medium text-gray-700">
+                  <span className="font-medium text-gray-800">
                     {product.name}
                   </span>
-                  <span className="text-[10px] text-gray-400 uppercase tracking-tighter">
+                  <span className="text-[10px] text-gray-500 uppercase tracking-tighter">
                     {product.category}
                   </span>
                 </div>
               </section>
               <div className="text-right">
                 <p className="font-semibold text-gray-800">${product.price}</p>
-                <span className="text-gray-400 text-xs">
+                <span className="text-gray-500 text-xs">
                   {product.sales} sales
                 </span>
               </div>

@@ -38,7 +38,7 @@ const Sidebar = ({ onClose }) => {
 
       {/* Main Menu */}
       <div className="flex-1 overflow-y-auto no-scrollbar pr-1">
-        <p className="text-[11px] ml-[7px] font-bold text-gray-400 uppercase mb-4 tracking-widest">
+        <p className="text-[11px] ml-[7px] font-bold text-gray-500 uppercase mb-4 tracking-widest">
           Menu
         </p>
         <div className="space-y-0.5">
@@ -64,7 +64,7 @@ const Sidebar = ({ onClose }) => {
         </div>
 
         {/* General section */}
-        <p className="text-[11px] ml-[7px] font-bold text-gray-400 uppercase mt-6 mb-4 tracking-widest">
+        <p className="text-[11px] ml-[7px] font-bold text-gray-500 uppercase mt-6 mb-4 tracking-widest">
           General
         </p>
         <div className="space-y-0.5">

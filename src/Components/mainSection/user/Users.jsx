@@ -52,10 +52,10 @@ const Users = () => {
                 alt=""
               />
               <div className="flex flex-col min-w-0">
-                <span className="font-medium text-gray-700 truncate">
+                <span className="font-medium text-gray-800 truncate">
                   {user.name}
                 </span>
-                <span className="text-xs text-gray-400 truncate">
+                <span className="text-xs text-gray-500 truncate">
                   {user.email}
                 </span>
               </div>
