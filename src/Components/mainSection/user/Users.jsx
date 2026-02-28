@@ -47,7 +47,7 @@ const Users = () => {
           >
             <section className="flex items-center gap-2 min-w-0">
               <img
-                src="/src/assets/avatar.jpg"
+                src="/assets/avatar.jpg"
                 className="w-10 h-10 rounded-full shrink-0"
                 alt=""
               />

@@ -50,7 +50,7 @@ const ProductList = () => {
               <section className="flex items-center gap-2">
                 <div>
                   <img
-                    src="/src/assets/planBasic.png"
+                    src="/assets/planBasic.png"
                     className="w-8 h-7"
                     alt=""
                   />

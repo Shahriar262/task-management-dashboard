@@ -1,6 +1,7 @@
 import { Search, Bell, Menu } from "lucide-react";
 import { GoMail } from "react-icons/go";
 
+
 const Header = ({ onMenuClick }) => {
   return (
     <div className="mx-2 sm:mx-4 rounded-2xl h-16 px-3 sm:px-6 flex items-center justify-between border-b border-gray-100 bg-gray-100 mt-2">
@@ -29,7 +30,7 @@ const Header = ({ onMenuClick }) => {
           />
 
           <img
-            src="/src/assets/search-right.png"
+            src="/assets/search-right.png"
             className="absolute top-2 right-5 hidden md:block"
             alt=""
           />
@@ -51,7 +52,7 @@ const Header = ({ onMenuClick }) => {
         {/* Avatar Section */}
         <div className="flex items-center gap-2">
           <img
-            src="/src/assets/avatar.jpg"
+            src="/assets/avatar.jpg"
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full cursor-pointer"
             alt=""
           />

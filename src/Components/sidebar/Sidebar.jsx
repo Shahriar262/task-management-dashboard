@@ -23,7 +23,7 @@ const Sidebar = ({ onClose }) => {
   };
 
   return (
-    <div className="h-full flex flex-col p-6 bg-gray-100 border-r border-gray-100 relative">
+    <div className="h-full flex flex-col p-5 bg-gray-100 border-r border-gray-100 relative">
       <button
         onClick={onClose}
         className="lg:hidden absolute top-4 right-4 p-1 hover:bg-gray-200 rounded-lg transition"
@@ -31,17 +31,17 @@ const Sidebar = ({ onClose }) => {
         <X size={20} className="text-gray-600" />
       </button>
       {/* Logo section */}
-      <div className="flex items-center -mt-3 gap-2 mb-10">
-        <img src="/src/assets/logo.png" alt="Logo" className="w-8 h-8" />
+      <div className="flex items-center gap-2 mb-8">
+        <img src="/assets/logo.png" alt="Logo" className="w-8 h-8" />
         <h2 className="text-xl font-bold text-gray-800">Donezo</h2>
       </div>
 
       {/* Main Menu */}
-      <div className="flex-1 overflow-y-auto no-scrollbar mb-1">
+      <div className="flex-1 overflow-y-auto no-scrollbar pr-1">
         <p className="text-[11px] ml-[7px] font-bold text-gray-400 uppercase mb-4 tracking-widest">
           Menu
         </p>
-        <div className="space-y-1">
+        <div className="space-y-0.5">
           <SidebarItem
             label="Dashboard"
             icon={<LayoutDashboard className="w-5 h-5 fill-[#14532d]" />}
@@ -64,10 +64,10 @@ const Sidebar = ({ onClose }) => {
         </div>
 
         {/* General section */}
-        <p className="text-[11px] ml-[7px] font-bold text-gray-400 uppercase mt-8 mb-4 tracking-widest">
+        <p className="text-[11px] ml-[7px] font-bold text-gray-400 uppercase mt-6 mb-4 tracking-widest">
           General
         </p>
-        <div className="space-y-1">
+        <div className="space-y-0.5">
           <SidebarItem
             label="Settings"
             icon={<IoSettingsOutline className="w-5 h-5" />}
@@ -83,7 +83,7 @@ const Sidebar = ({ onClose }) => {
 
       {/* Download card section */}
       <div className="mt-auto pt-4">
-        <div className="relative rounded-2xl p-5 overflow-hidden bg-linear-to-r from-green-800 to-emerald-800 text-white shadow-lg">
+        <div className="relative rounded-2xl p-4 overflow-hidden bg-linear-to-r from-green-800 to-emerald-800 text-white shadow-lg">
           <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
 
           <div className="relative z-10">
